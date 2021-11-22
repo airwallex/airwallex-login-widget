@@ -1,0 +1,78 @@
+{
+  "name": "@airwallex/login-widget",
+  "version": "1.0.0",
+  "description": "airwallex login widget",
+  "repository": "github:airwallex/airwallex-login-widget",
+  "author": "Airwallex",
+  "license": "MIT",
+  "keywords": [
+    "Airwallex",
+    "Login",
+    "Widget",
+    "Two factor"
+  ],
+  "type": "module",
+  "source": "./src/index.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "watch": "microbundle watch",
+    "build": "tsc --noEmit && microbundle build",
+    "test": "jest",
+    "lint": "eslint \"src/*.{ts,tsx}\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/gitlab": "^7.0.3",
+    "@swc/core": "^1.2.102",
+    "@swc/jest": "^0.2.5",
+    "@testing-library/dom": "^8.10.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-jest-dom": "^3.9.2",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.3",
+    "microbundle": "^0.14.1",
+    "prettier": "^2.4.1",
+    "semantic-release": "^18.0.0",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  },
+  "browserslist": [
+    "defaults",
+    "maintained node versions"
+  ],
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
