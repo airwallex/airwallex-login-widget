@@ -1,0 +1,35 @@
+name: Release Beta
+
+on:
+  workflow_run:
+    workflows: ['Build and Test']
+    branches: ['beta']
+    types: ['completed']
+
+jobs:
+  release-beta:
+    name: Release Beta
+    environment: beta
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 'lts/*'
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.22.2
+
+      - uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: build-and-test.yml
+          name: dist
+
+      - run: |
+          pnpm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+
+      - run: |
+          pnpm install
+          pnpm exec semantic-release
