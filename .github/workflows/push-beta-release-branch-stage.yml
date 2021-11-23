@@ -1,15 +1,15 @@
-name: Push Release Branch Stage
+name: Push Beta Release Branch Stage
 
 on:
   push:
-    branches: ['master']
+    branches: [beta]
 
 jobs:
-  build_test_and_release:
-    environment: production
+  build_test_and_release_beta:
+    environment: beta
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master branch
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
@@ -30,7 +30,7 @@ jobs:
           pnpm run build
           pnpm run test
 
-      - name: Release
+      - name: Release beta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
