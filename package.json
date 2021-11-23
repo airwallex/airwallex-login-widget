@@ -11,6 +11,9 @@
     "Widget",
     "Two factor"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "source": "./src/index.ts",
   "exports": {
