@@ -2,17 +2,18 @@ name: Push Release Branch Stage
 
 on:
   push:
-    branches: ['master']
+    branches: [master]
 
 jobs:
   build_test_and_release:
     environment: production
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master branch
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -32,6 +33,6 @@ jobs:
 
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm exec semantic-release
