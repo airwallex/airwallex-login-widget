@@ -5,6 +5,6 @@
     "@semantic-release/changelog",
     "@semantic-release/npm",
     "@semantic-release/git",
-    "@semantic-release/gitlab"
+    "@semantic-release/github"
   ]
 }
