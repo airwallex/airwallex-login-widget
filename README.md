@@ -234,3 +234,9 @@ Remove the widget from the DOM.
 All event listeners will NOT be removed, they must be removed manually.
 
 type: `() => void;`
+
+## The Customizable Parts
+
+![Customizable Parts in Login Page](assets/customizable-parts-login.png)
+
+![Customizable Parts in Auth Page](assets/customizable-parts-auth.png)
