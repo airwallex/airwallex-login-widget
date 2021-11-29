@@ -192,8 +192,8 @@ const ERROR_CODE_MAP = {
   INVALID_RESOURCE_ID: 'Invalid resource ID',
   TWO_FACTOR_AUTHENTICATION_NOT_ENABLED: 'Two-factor authentication is not enabled',
   UNKNOWN_ERROR: 'Unknown error',
-  USER_AUTH_LOCKED: 'User auth has been locked',
-  USER_LOGIN_LOCKED: 'User login has been locked',
+  USER_AUTH_LOCKED: 'User has been locked due to multiple failed authentication attempts',
+  USER_LOGIN_LOCKED: 'User has been locked due to multiple failed login attempts',
 };
 ```
 
