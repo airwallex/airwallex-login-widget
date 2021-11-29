@@ -220,6 +220,7 @@ export type Environment = 'staging' | 'demo' | 'production';
 export interface WidgetInitOptions {
   /**
    * The URL of the logo to display in the login widget.
+   * The recommended size of the image is 72x72 px.
    */
   logoUrl: string;
   /**

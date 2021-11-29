@@ -17,10 +17,11 @@ import { LoginWidget } from '@airwallex/login-widget';
 // These options will apply to all the login widgets.
 LoginWidget.init({
   // The URL of the logo to display in the login widget.
+  // The recommended size of the image is 72x72 px.
   logoUrl: 'https://your_website_logo_url',
   // The environment of the widget.
   env: 'production',
-  // 'en' or 'zh', there are the supported languages right now
+  // 'en' or 'zh', these are the supported languages right now
   locale: 'en',
 });
 ```
@@ -41,18 +42,6 @@ const loginWidget = new LoginWidget({
 });
 ```
 
-You will have to create a mask yourself, and mount the widget on top of it:
-
-```html
-<div class="mask">
-  <div id="widget-container"></div>
-</div>
-```
-
-```js
-loginWidget.mount('#widget-container');
-```
-
 Listen to the cancel event, so that when the user clicks the exit button, you could unmount the widget
 
 ```js
@@ -69,6 +58,18 @@ loginWidget.on('auth_success', ({ signedToken }) => {
 });
 ```
 
+You will have to create a mask yourself, and mount the widget on top of it:
+
+```html
+<div class="mask">
+  <div id="widget-container"></div>
+</div>
+```
+
+```js
+loginWidget.mount('#widget-container');
+```
+
 ## `LoginWidget`
 
 ### `LoginWidget.init`
@@ -79,6 +80,7 @@ type: `(initOptions: WidgetInitOptions) => void;`
 interface WidgetInitOptions {
   /**
    * The URL of the logo to display in the login widget.
+   * The recommended size of the image is 72x72 px.
    */
   logoUrl: string;
   /**
@@ -190,8 +192,8 @@ const ERROR_CODE_MAP = {
   INVALID_RESOURCE_ID: 'Invalid resource ID',
   TWO_FACTOR_AUTHENTICATION_NOT_ENABLED: 'Two-factor authentication is not enabled',
   UNKNOWN_ERROR: 'Unknown error',
-  USER_AUTH_LOCKED: 'User auth has been locked',
-  USER_LOGIN_LOCKED: 'User login has been locked',
+  USER_AUTH_LOCKED: 'User has been locked due to multiple failed authentication attempts',
+  USER_LOGIN_LOCKED: 'User has been locked due to multiple failed login attempts',
 };
 ```
 
