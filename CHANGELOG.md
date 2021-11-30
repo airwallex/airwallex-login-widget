@@ -1,3 +1,9 @@
+# [1.0.0-beta.2](https://github.com/airwallex/airwallex-login-widget/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2021-11-30)
+
+### Features
+
+- update error messages ([#9](https://github.com/airwallex/airwallex-login-widget/issues/9)) ([364acde](https://github.com/airwallex/airwallex-login-widget/commit/364acde538111d37c9e9e89b49b1381781d60f12))
+
 # 1.0.0-beta.1 (2021-11-23)
 
 ### Bug Fixes
