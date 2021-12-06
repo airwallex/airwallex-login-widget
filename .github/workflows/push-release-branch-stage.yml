@@ -41,6 +41,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          pnpm config set registry=https://npm.pkg.github.com/airwallex
+          pnpm config set registry=https://npm.pkg.github.com
           pnpm config set //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
           pnpm publish
