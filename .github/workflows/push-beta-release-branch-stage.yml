@@ -43,4 +43,4 @@ jobs:
         run: |
           pnpm config set registry=https://npm.pkg.github.com
           pnpm config set //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
-          pnpm publish --tag beta
+          pnpm publish --tag beta --publish-branch beta
