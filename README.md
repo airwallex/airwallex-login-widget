@@ -69,7 +69,9 @@ You will have to create a mask yourself, and mount the widget on top of it:
 ```js
 loginWidget.mount('#widget-container');
 ```
-
+## `Tips`
+For better experience mobile responsive friendly, recommend set `<meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />` in html head. 
 ## `LoginWidget`
 
 ### `LoginWidget.init`
