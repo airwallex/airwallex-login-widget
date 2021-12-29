@@ -1,0 +1,46 @@
+name: Push Beta Release Branch Stage
+
+on:
+  push:
+    branches: [beta]
+
+jobs:
+  build_test_and_release_beta:
+    environment: beta
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 'lts/*'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.22.2
+
+      - name: Run build and test
+        run: |
+          pnpm install
+          pnpm run build
+          pnpm run test
+
+      - name: Release beta
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm exec semantic-release
+
+      - name: Publish Beta to GitHub Packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          pnpm config set registry=https://npm.pkg.github.com
+          pnpm config set //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+          pnpm publish --tag beta --publish-branch beta
