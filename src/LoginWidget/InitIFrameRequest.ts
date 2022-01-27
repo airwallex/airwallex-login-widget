@@ -15,6 +15,6 @@ export interface InitIFrameRequestPayload {
   authSummaryText: string | undefined;
   labels: LoginWidgetOptionsLabels | undefined;
   language: Language;
-  logoUrl: string;
+  logoUrl: string | undefined;
   resourceId: string | undefined;
 }
