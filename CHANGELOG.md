@@ -1,3 +1,9 @@
+# [1.1.0](https://github.com/airwallex/airwallex-login-widget/compare/v1.0.0...v1.1.0) (2022-01-27)
+
+### Features
+
+- make `logoUrl` optional ([#16](https://github.com/airwallex/airwallex-login-widget/issues/16)) ([974ff39](https://github.com/airwallex/airwallex-login-widget/commit/974ff3921022be868e4eaf8a9390cc4032f309b2))
+
 # 1.0.0 (2021-12-29)
 
 ### Bug Fixes
