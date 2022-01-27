@@ -69,14 +69,16 @@ You will have to create a mask yourself, and mount the widget on top of it:
 ```js
 loginWidget.mount('#widget-container');
 ```
+
 ## `Tips`
-For better experience mobile responsive friendly, recommend set `<meta name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />` in html head. 
+
+For better experience mobile responsive friendly, recommend set `<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />` in html head.
+
 ## `LoginWidget`
 
 ### `LoginWidget.init`
 
-type: `(initOptions: WidgetInitOptions) => void;`
+type: `(initOptions?: WidgetInitOptions) => void;`
 
 ```typescript
 interface WidgetInitOptions {
@@ -84,7 +86,7 @@ interface WidgetInitOptions {
    * The URL of the logo to display in the login widget.
    * The recommended size of the image is 72x72 px.
    */
-  logoUrl: string;
+  logoUrl?: string | undefined;
   /**
    * The environment of the login widget
    * @default 'production'

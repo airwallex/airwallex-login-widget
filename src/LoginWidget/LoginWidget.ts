@@ -23,11 +23,11 @@ const iframeSource: Record<Environment, string> = {
 };
 
 export class LoginWidget extends BaseWidget {
-  static init(options: WidgetInitOptions) {
+  static init(options?: WidgetInitOptions) {
     widgetInitOptions = {
-      logoUrl: options.logoUrl,
-      env: options.env ?? 'production',
-      locale: options.locale ?? 'en',
+      logoUrl: options?.logoUrl,
+      env: options?.env ?? 'production',
+      locale: options?.locale ?? 'en',
     };
   }
 
@@ -222,7 +222,7 @@ export interface WidgetInitOptions {
    * The URL of the logo to display in the login widget.
    * The recommended size of the image is 72x72 px.
    */
-  logoUrl: string;
+  logoUrl?: string | undefined;
   /**
    * The environment of the login widget
    * @default 'production'

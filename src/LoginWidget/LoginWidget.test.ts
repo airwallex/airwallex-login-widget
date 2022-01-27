@@ -11,10 +11,8 @@ import { IFrameRedirectEvent } from './IFrameRedirectEvent';
 import { IFrameResizeEvent } from './IFrameResizeEvent';
 import { LoginWidget, widgetInitOptions } from './LoginWidget';
 
-const logoUrl = 'https://www.airwallex.com/logo';
-
 const initializeLoginWidget = () => {
-  LoginWidget.init({ logoUrl });
+  LoginWidget.init();
   return new LoginWidget();
 };
 
@@ -25,7 +23,7 @@ test("it should throw an error if the widget wasn't initialized", () => {
 test('it should set default init options value', () => {
   expect(widgetInitOptions).toBeNull();
   initializeLoginWidget();
-  expect(widgetInitOptions).toEqual({ logoUrl, env: 'production', locale: 'en' });
+  expect(widgetInitOptions).toEqual({ env: 'production', locale: 'en' });
 });
 
 test('it should initialize iframe element attributes', () => {
