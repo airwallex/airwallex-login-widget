@@ -61,7 +61,7 @@ export class LoginWidget extends BaseWidget {
     this.iframe.src = `${iframeSource[this.#widgetInitOptionsWithDefaults.env]}?origin=${window.origin}`;
     this.iframe.style.transition = 'height 0.35s ease 0s';
     this.iframe.style.width = '100%';
-    this.iframe.style.height = '563px';
+    this.iframe.style.height = '459px';
     this.iframe.style.background = 'white';
     this.iframe.style.border = 'none';
     this.iframe.style.borderRadius = '8px';
