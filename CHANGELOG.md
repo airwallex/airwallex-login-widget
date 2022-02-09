@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/airwallex/airwallex-login-widget/compare/v1.1.0...v1.1.1) (2022-02-09)
+
+### Bug Fixes
+
+- change dialog default height ([#17](https://github.com/airwallex/airwallex-login-widget/issues/17)) ([75a3c73](https://github.com/airwallex/airwallex-login-widget/commit/75a3c73898447105aacace990fb38848e8be4966))
+
 # [1.1.0](https://github.com/airwallex/airwallex-login-widget/compare/v1.0.0...v1.1.0) (2022-01-27)
 
 ### Features
