@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/airwallex/airwallex-login-widget/compare/v1.1.1...v1.2.0) (2022-02-17)
+
+### Features
+
+- add enable disclaimer optional props ([#18](https://github.com/airwallex/airwallex-login-widget/issues/18)) ([2690c3a](https://github.com/airwallex/airwallex-login-widget/commit/2690c3ad16778858c14a1c33a6c25be50026c6e6))
+
 ## [1.1.1](https://github.com/airwallex/airwallex-login-widget/compare/v1.1.0...v1.1.1) (2022-02-09)
 
 ### Bug Fixes
