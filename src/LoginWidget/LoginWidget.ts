@@ -143,6 +143,7 @@ export class LoginWidget extends BaseWidget {
         language: this.#widgetInitOptionsWithDefaults.locale,
         logoUrl: this.#widgetInitOptionsWithDefaults.logoUrl,
         resourceId: this.#options?.resourceId,
+        enableDisclaimer: this.#options?.enableDisclaimer,
       }),
       this.#iframeOrigin,
     );
@@ -192,6 +193,7 @@ export interface LoginWidgetOptions {
    * Custom the texts of the widget.
    */
   labels?: LoginWidgetOptionsLabels | undefined;
+  enableDisclaimer?: boolean
 }
 
 export interface LoginWidgetOptionsLabels {
@@ -211,6 +213,7 @@ export interface LoginWidgetUpdateOptions {
   authSummaryText?: string | undefined;
   resourceId?: string | undefined;
   labels?: LoginWidgetOptionsLabels | undefined;
+  enableDisclaimer?: boolean | undefined;
 }
 
 export type Language = 'en' | 'zh';

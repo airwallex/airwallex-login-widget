@@ -14,7 +14,6 @@ export class UpdateIFrameRequest implements MessageData {
 export interface UpdateIFrameRequestPayload {
   authSummaryText?: string | undefined;
   labels?: LoginWidgetOptionsLabels | undefined;
-  language?: Language | undefined;
-  logoUrl?: string | undefined;
   resourceId?: string | undefined;
+  enableDisclaimer?: boolean | undefined;
 }

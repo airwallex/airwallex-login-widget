@@ -17,4 +17,5 @@ export interface InitIFrameRequestPayload {
   language: Language;
   logoUrl: string | undefined;
   resourceId: string | undefined;
+  enableDisclaimer: boolean | undefined
 }
