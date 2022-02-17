@@ -15,5 +15,7 @@ export interface UpdateIFrameRequestPayload {
   authSummaryText?: string | undefined;
   labels?: LoginWidgetOptionsLabels | undefined;
   resourceId?: string | undefined;
+  language?: Language | undefined;
+  logoUrl?: string | undefined;
   enableDisclaimer?: boolean | undefined;
 }
