@@ -39,6 +39,7 @@ const loginWidget = new LoginWidget({
   resourceId: 'the_unique_resource_id_to_be_authenticated',
   // You could also customize the labels
   labels: { emailLabel: 'User name' },
+  enableDisclaimer: true,
 });
 ```
 
@@ -230,6 +231,7 @@ interface LoginWidgetUpdateOptions {
   authSummaryText?: string | undefined;
   resourceId?: string | undefined;
   labels?: LoginWidgetOptionsLabels | undefined;
+  enableDisclaimer?: boolean | undefined;
 }
 ```
 
