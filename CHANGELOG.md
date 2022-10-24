@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/airwallex/airwallex-login-widget/compare/v1.2.0...v1.2.1) (2022-10-24)
+
+### Bug Fixes
+
+- update package license ([97bdb65](https://github.com/airwallex/airwallex-login-widget/commit/97bdb657b1c45a3ce9e74c070beec52049bc8e62))
+
 # [1.2.0](https://github.com/airwallex/airwallex-login-widget/compare/v1.1.1...v1.2.0) (2022-02-17)
 
 ### Features
