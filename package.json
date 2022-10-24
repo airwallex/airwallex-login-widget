@@ -4,7 +4,7 @@
   "description": "airwallex login widget",
   "repository": "https://github.com/airwallex/airwallex-login-widget",
   "author": "Airwallex",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "Airwallex",
     "Login",
